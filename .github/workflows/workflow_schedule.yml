@@ -1,0 +1,13 @@
+name: Workflow Schedule
+on:
+  schedule:
+    - cron: "0/10 * * * *"
+    - cron: "0 0 1 * *"
+
+jobs:
+  say_hello_cron:
+    name: "say_hello_cron"
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          echo 'Trigerred by cron: ${{ github.event.schedule }}'

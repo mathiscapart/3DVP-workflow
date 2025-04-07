@@ -1,5 +1,7 @@
 name: Workflow Schedule
 on:
+  workflow_dispatch:
+
   #schedule:
 #    - cron: "*/10 * * * *"
 #    - cron: "0 0 1 * *"

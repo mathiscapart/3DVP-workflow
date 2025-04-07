@@ -24,4 +24,4 @@ jobs:
     name: "Player Infos"
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Le joueur ${{ username_input }} est de niveau ${{ level_input }} et joue un ${{ choice_input }}."
+      - run: echo "Le joueur ${{ inputs.username_input }} est de niveau ${{ inputs.level_input }} et joue un ${{ inputs.choice_input }}."

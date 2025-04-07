@@ -1,0 +1,14 @@
+name: "Workflow Trigger"
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: "0/10 * * * *"
+
+jobs:
+  trigger_by:
+    name: "trigger_by"
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo 'Le job a été déclenché par un événement de type : ${{ github.event_name }}'

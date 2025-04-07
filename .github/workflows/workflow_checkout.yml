@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Load source code"
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       - name: "print readme"
         run: "cat README.md"

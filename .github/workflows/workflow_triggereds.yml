@@ -7,7 +7,7 @@ on:
 
 jobs:
   trigger_by:
-    name: "trigger_by"
+    name: "triggered_by"
     runs-on: ubuntu-latest
     steps:
       - run: |

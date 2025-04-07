@@ -1,6 +1,6 @@
 name: Workflow Schedule
 on:
-  schedule:
+  #schedule:
 #    - cron: "*/10 * * * *"
 #    - cron: "0 0 1 * *"
 

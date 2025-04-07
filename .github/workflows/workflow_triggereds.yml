@@ -2,7 +2,7 @@ name: "Workflow Trigger"
 on:
   workflow_dispatch:
   push:
-  schedule:
+  #schedule:
     #- cron: "*/10 * * * *"
 
 jobs:

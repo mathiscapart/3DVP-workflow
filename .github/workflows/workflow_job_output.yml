@@ -1,0 +1,22 @@
+name: Workflow job output
+on:
+  workflow_dispatch:
+
+jobs:
+  prepare_tests:
+    runs_on: ubuntu-latest
+    outputs:
+      host: ${{ steps.setup_host.outputs.HOST }}
+      database: ${{ steps.setup_host.outputs.DATABASE }}
+    steps:
+      - id: setup_host
+        run: |
+          echo "HOST=srv1" >> $GITHUB_OUTPUT
+          echo "DATABASE=prep002" >> $GITHUB_OUTPUT
+  display_infos:
+    runs_on: ubuntu-latest
+    needs: prepare_tests
+    steps:
+      - run: |
+          echo "HOST=${{ needs.prepare_tests.outputs.host }}"
+          echo "HOST=${{ needs.prepare_tests.outputs.database }}"

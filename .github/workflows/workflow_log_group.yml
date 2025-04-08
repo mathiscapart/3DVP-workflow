@@ -1,0 +1,13 @@
+name: Workflow log_group
+on:
+  workflow_dispatch:
+
+jobs:
+  log_group:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::group::ecole_it"
+          echo " hello, ecole-it"
+          echo "::endgroup::"
+          echo "ceci n'est pas dans le groupe"

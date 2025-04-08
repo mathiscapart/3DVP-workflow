@@ -1,0 +1,12 @@
+name: WorkFlow Env
+on:
+  workflow_dispatch:
+
+env:
+  MESSAGE: Ceci est une variable d'environnement
+
+jobs:
+  display_env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ env.MESSAGE }}"

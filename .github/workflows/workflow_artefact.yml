@@ -14,7 +14,7 @@ jobs:
           with:
             python-version: '3.10'
         - run: python -m pip install -r requirements.txt
-        - run: python -m pip install -U pytest pystest-html
+        - run: python -m pip install pytest pystest-html
         - run: pytest tests/ --html=report.html
         - uses: actions/upload-artifact@v4
           with:

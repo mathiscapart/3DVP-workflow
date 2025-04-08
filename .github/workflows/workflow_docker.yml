@@ -1,6 +1,6 @@
 name: WorkFlow Docker
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   build_and_publish:
@@ -19,6 +19,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - uses: docker/build-push-action@v3
         with:
           push: 'true'

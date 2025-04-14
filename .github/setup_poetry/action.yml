@@ -9,7 +9,6 @@ runs:
     - uses: actions/setup-python@v5
       with:
         python-version: ${{ inputs.python }}
-        cache: "poetry"
     - run: curl -sSL https://install.python-poetry.org | python -
       shell: bash
     - run: poetry config virtualenvs.in-project true

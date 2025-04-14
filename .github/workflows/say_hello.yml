@@ -1,0 +1,9 @@
+name: "Say Hello to host runner"
+on:
+  workflow_dispatch:
+
+jobs:
+  hello_host:
+    runs-on: runner
+    steps:
+      - run: echo "Hello from the runner!"

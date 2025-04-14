@@ -5,6 +5,7 @@ inputs:
 
 runs:
   using: composite
+  shell: bash
   steps:
     - uses: actions/setup-python@v5
       with:

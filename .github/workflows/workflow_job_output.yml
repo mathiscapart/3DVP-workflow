@@ -4,7 +4,7 @@ on:
 
 jobs:
   prepare_tests:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     outputs:
       host: ${{ steps.setup_host.outputs.HOST }}
       database: ${{ steps.setup_host.outputs.DATABASE }}
@@ -14,7 +14,7 @@ jobs:
           echo "HOST=srv1" >> $GITHUB_OUTPUT
           echo "DATABASE=prep002" >> $GITHUB_OUTPUT
   display_infos:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: prepare_tests
     steps:
       - run: |

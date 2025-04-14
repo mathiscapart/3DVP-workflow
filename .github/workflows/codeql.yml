@@ -1,0 +1,25 @@
+name: "CodeQl"
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  codeql:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language:
+          - "python"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3.28.15
+        with:
+          languages: ${{ matrix.language }}
+      - uses: github/codeql-action/analyze@v3.28.15
+        with:
+          category: "/language:${{matrix.language}}"

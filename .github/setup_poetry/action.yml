@@ -10,7 +10,6 @@ runs:
       with:
         python-version: ${{ inputs.python }}
         cache: "poetry"
-      shell: bash
     - run: curl -sSL https://install.python-poetry.org | python -
       shell: bash
     - run: poetry config virtualenvs.in-project true
@@ -20,4 +19,3 @@ runs:
       with:
         path: .venv
         key: poetry
-      shell: bash

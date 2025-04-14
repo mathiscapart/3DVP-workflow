@@ -7,7 +7,7 @@ jobs:
     runs-on: runner
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup_poetry
+      - uses: ./.github/setup_poetry
         with:
           python: "3.10"
       - run: poetry install
